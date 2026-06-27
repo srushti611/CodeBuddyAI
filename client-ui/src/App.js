@@ -15,7 +15,7 @@ function App() {
     setLoading(true);
     setFeedback('');
     try {
-      const res = await fetch('https://codebuddy-backend-s9hc.onrender.com/api/generate-course', {
+      const res = await fetch('https://codebuddy-backend-fg0j.onrender.com/api/generate-course', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(inputs)
@@ -35,7 +35,7 @@ function App() {
     if (!userCode.trim()) return alert("Type or paste your answer code string first!");
     setLoading(true);
     try {
-     const res = await fetch('https://codebuddy-backend-s9hc.onrender.com/api/verify-code', {
+     const res = await fetch('https://codebuddy-backend-fg0j.onrender.com/api/verify-code', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ codeInput: userCode, moduleId: course.modules[activeModuleIndex].id })
